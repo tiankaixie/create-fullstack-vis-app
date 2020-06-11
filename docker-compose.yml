@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+    gui:
+        build: gui
+        expose:
+            - "3000"
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./gui:/gui
+        networks:
+            - gui-server
+        stdin_open: true
+        tty: true
+        environment:
+            - CI=true
+        command:
+            bash -c "npm install
+            && npm start"
+    server:
+        build: ./server
+        expose:
+            - "5000"
+        ports:
+            - "5000:5000"
+        volumes:
+            - ./server:/server
+        networks:
+            - gui-server
+        command: gunicorn server:app -c gunicorn.conf.py
+
+networks:
+    gui-server:
+      driver: bridge
