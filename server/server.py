@@ -25,5 +25,16 @@ def test():
     return jsonify(res)
 
 
+@app.route('/getData/', methods=['POST'])
+def test():
+
+    request_raw = request.get_json()
+    print("get" + request_raw["name"] + "api is triggered")
+    res = {
+        "name": request_raw["name"]
+    }
+    return jsonify(res)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

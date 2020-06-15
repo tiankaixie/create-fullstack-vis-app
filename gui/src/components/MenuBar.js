@@ -143,7 +143,7 @@ function PrimarySearchAppBar() {
 
             <Button onClick={demoOnClick}>API Request</Button>
 
-            <Button>Vis Components</Button>
+            <Button><Link to={"/viscomponents"}>Vis Components</Link></Button>
 
             <Button><Link to="/about">About</Link></Button>
           </Box>

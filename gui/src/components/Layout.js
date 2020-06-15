@@ -6,6 +6,7 @@ import {getData} from "../actions";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import About from "./About";
 import UIComponents from "./UIComponents";
+import VISComponents from "./VISComponents";
 
 const mapStateToProps = (state) => {
   return {};
@@ -13,7 +14,7 @@ const mapStateToProps = (state) => {
 
 class Layout extends React.Component {
   componentDidMount() {
-    this.props.getData();
+    this.props.getData("graphBasic");
   }
   render() {
     return (
@@ -22,8 +23,11 @@ class Layout extends React.Component {
         <Switch>
           <Route path="/" exact component={UIComponents}>
           </Route>
+          <Route path="/viscomponents" exact component={VISComponents}>
+          </Route>
           <Route path="/about" exact component={About}>
           </Route>
+
         </Switch>
       </BrowserRouter>
     );

@@ -1,6 +1,8 @@
 import {LOADING_DATA} from "../constants/actionTypes";
 
-const initialState = {};
+const initialState = {
+  data: {}
+};
 
 function rootReducer(state = initialState, action) {
   if (action.type === LOADING_DATA) {
@@ -8,7 +10,6 @@ function rootReducer(state = initialState, action) {
     console.info(action.payload);
     return Object.assign({}, state, action.payload);
   }
-
   return state;
 }
 
