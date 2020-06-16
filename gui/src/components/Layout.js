@@ -27,7 +27,6 @@ class Layout extends React.Component {
           </Route>
           <Route path="/about" exact component={About}>
           </Route>
-
         </Switch>
       </BrowserRouter>
     );

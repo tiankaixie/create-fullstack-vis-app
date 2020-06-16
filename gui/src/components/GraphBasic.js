@@ -8,6 +8,10 @@ export default class GraphBasic extends React.Component {
     this.initializeCanvas();
   }
 
+  componentWillReceiveProps(nextProps, nextContext) {
+    this.updateCanvas(nextProps);
+  }
+
   /***
    * Graph simulation when dragging the node
    * @param simulation {Object} d3 simulation
@@ -43,14 +47,15 @@ export default class GraphBasic extends React.Component {
     const circleRadius = 7;
     if (
       !data["graphBasic"] ||
-      data[["graphBasic"]]["nodes"] === [] ||
-      data[["graphBasic"]]["edges"] === []
+      data["graphBasic"]["nodes"] === [] ||
+      data["graphBasic"]["edges"] === []
     )
       return;
 
-    let nodesData = data["nodes"];
-    let edgesData = data["edges"];
+    let nodesData = data["graphBasic"]["nodes"];
+    let edgesData = data["graphBasic"]["edges"];
 
+    console.log(nodesData);
     /***
      * Graph simulation
      */
@@ -64,12 +69,12 @@ export default class GraphBasic extends React.Component {
             return d.node_id;
           })
           .distance(d => {
-            if (d.target.level === "inf") {
-              return 500;
-            }
+            // if (d.target.level === "inf") {
+            //   return 500;
+            // }
             //return d.target.level * 10;
             // return Math.exp(d.target.level) *5
-            return 50;
+            return 200;
           })
       )
       .force("charge", d3.forceManyBody().strength(-10))
@@ -96,13 +101,13 @@ export default class GraphBasic extends React.Component {
       .append("svg:path")
       .attr("d", "M 0,-5 L 10 ,0 L 0,5")
       .attr("fill", "black")
-      .attr("opacity", 0.5)
+      .attr("opacity", 0.3)
       .style("stroke", "none");
 
     const link = svg
       .append("g")
       .attr("class", "edges")
-      .attr("stroke-opacity", 0.7)
+      .attr("stroke-opacity", 0.3)
       .selectAll(".edges")
       .data(edgesData)
       .enter()
@@ -152,8 +157,11 @@ export default class GraphBasic extends React.Component {
         d.fy = null;
       });
 
+    const text = node.append("text").attr("text", d => d.node_id);
+
     simulation.on("tick", () => {
-      // direct link
+      // direct
+      // link
       //   .attr("x1", d => d.source.x)
       //   .attr("y1", d => d.source.y)
       //
@@ -236,7 +244,7 @@ export default class GraphBasic extends React.Component {
   initializeCanvas() {
     const { removedID } = this.props;
 
-    const baseGroup = d3.select("#impact-graph-chart-base-" + removedID);
+    const baseGroup = d3.select("#graph-basic-base");
     this.renderSvg(baseGroup, this.props);
 
     baseGroup.raise();
@@ -250,9 +258,9 @@ export default class GraphBasic extends React.Component {
   updateCanvas(props) {
     const thisDOM = findDOMNode(this);
     const svgRoot = d3.select(thisDOM);
-    let baseGroup = d3.select(thisDOM).select("#impact-graph-chart-base");
+    let baseGroup = d3.select(thisDOM).select("#graph-basic-base");
     baseGroup.remove();
-    baseGroup = svgRoot.append("g").attr("id", "impact-graph-chart-base");
+    baseGroup = svgRoot.append("g").attr("id", "graph-basic-base");
     this.renderSvg(baseGroup, props);
   }
 

@@ -2,6 +2,7 @@ import axios from "axios";
 import { LOADING_DATA } from "../constants/actionTypes";
 
 export function getData(name) {
+  console.log("afewlfjlwifejawoefiwjae");
   return function(dispatch, getState) {
     axios
       .post(
@@ -17,7 +18,8 @@ export function getData(name) {
         // alert(parsedData);
         let data = {};
         data[name] = parsedData;
-        dispatch({ type: LOADING_DATA, payload: data });
+        console.log(parsedData);
+        dispatch({ type: LOADING_DATA, payload: {data: data} });
       });
   };
 }

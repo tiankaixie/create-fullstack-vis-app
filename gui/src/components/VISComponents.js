@@ -22,7 +22,7 @@ class VISComponents extends React.Component {
         <Grid container>
           <Grid item>
             <Box>
-              <GraphBasic canvasHeight={500} canvasWidth={500} data={data}/>
+              <GraphBasic canvasHeight={600} canvasWidth={600} data={data}/>
             </Box>
           </Grid>
         </Grid>
