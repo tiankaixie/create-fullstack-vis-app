@@ -134,7 +134,7 @@ function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton> */}
           <Typography className={classes.title} variant="h5" noWrap>
-            Data&Vis
+            DATA&VIS
           </Typography>
           <div className={classes.grow} />
 

@@ -78,7 +78,7 @@ export default class GraphBasic extends React.Component {
           })
       )
       .force("charge", d3.forceManyBody().strength(-10))
-      .force("center", d3.forceCenter(canvasWidth / 2.6, canvasHeight / 2))
+      .force("center", d3.forceCenter(canvasWidth / 2, canvasHeight / 2))
       .force("collision", d3.forceCollide(circleRadius + 5));
 
     const svg = baseGroup;
