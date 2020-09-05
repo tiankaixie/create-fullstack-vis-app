@@ -16,16 +16,6 @@ def hello():
     return f'Hello, {escape(name)}!'
 
 
-@app.route('/test/', methods=['POST'])
-def test():
-    print("test api is triggered")
-    request_raw = request.get_json()
-    res = {
-        "who": request_raw["who"]
-    }
-    return jsonify(res)
-
-
 @app.route('/getData/', methods=['POST'])
 def get_data():
     request_raw = request.get_json()

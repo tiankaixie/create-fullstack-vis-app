@@ -1,18 +1,31 @@
-import { Box, Grid } from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import { fade, withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
 import MultipleSelect from "./MultipleSelect";
 import MuiVirtualizedTable from "./VirtualizedTable";
 import VirtualizedTable from "./VirtualizedTable";
 import ReactVirtualizedTable from "./VirtualizedTable";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    padding: theme.spacing(4)
-  }
-});
+    padding: theme.spacing(4),
+  },
+  buttons: {
+    width: "90%",
+    display: "flex",
+    justifyContent: "space-between",
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(2)
+  },
+  selects: {
+    width: "90%",
+    padding: theme.spacing(2),
+    marginBottom: theme.spacing(2)
 
+  },
+});
 
 class UIComponents extends React.Component {
   render() {
@@ -20,25 +33,33 @@ class UIComponents extends React.Component {
     return (
       <Box className={classes.root}>
         <Grid container>
-          <Grid item md={12}>
-            <Box>
-              <Button>Plain Button</Button>
-              <Button variant="contained" color="secondary" disableElevation>
-                Disable elevation
-              </Button>
-              <Button variant="outlined" color="primary">
-                Outlined
-              </Button>
-              <Button variant="contained" color="primary">
+          <Grid item md={6}>
+            <Typography variant="h5" gutterBottom>Button</Typography>
+            <Card variant="outlined" className={classes.buttons}>
+              <Button size="small" variant="contained" color="primary">
                 Contained
               </Button>
-            </Box>
+              <Button size="small" variant="outlined" color="primary">
+                Outlined
+              </Button>
+              <Button
+                size="small"
+                variant="contained"
+                color="secondary"
+                disableElevation
+              >
+                Disable elevation
+              </Button>
+              <Button size="small">Plain Button</Button>
+            </Card>
+            <Typography variant="h5" gutterBottom>Select</Typography>
+            <Card variant="outlined" className={classes.selects}>
+              <MultipleSelect />
+            </Card>
           </Grid>
-          <Grid item md={12}>
-            <MultipleSelect />
-          </Grid>
-          <Grid item md={12}>
-            <ReactVirtualizedTable/>
+          <Grid item md={6}>
+            <Typography variant="h5" gutterBottom>Table</Typography>
+            <ReactVirtualizedTable />
           </Grid>
         </Grid>
       </Box>

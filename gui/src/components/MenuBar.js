@@ -27,9 +27,12 @@ const useStyles = makeStyles((theme) => ({
     // [theme.breakpoints.up("sm")]: {
     //   display: "block",
     // },
-    fontFamily: "Raleway",
+    // fontFamily: "Roboto",
   },
-
+  link: {
+    color: "white",
+    textDecoration: "none",
+  },
   sectionDesktop: {
     display: "none",
     [theme.breakpoints.up("md")]: {
@@ -123,7 +126,7 @@ function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" elevation={0} className={classes.appBar}>
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           {/* <IconButton
             edge="start"
@@ -133,19 +136,19 @@ function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography className={classes.title} variant="h5" noWrap>
+          <Typography className={classes.title} variant="h6" noWrap>
             DATA&VIS
           </Typography>
           <div className={classes.grow} />
 
           <Box className={classes.sectionDesktop}>
-            <Button><Link to="/">UI Components</Link></Button>
+            <Button><Link className={classes.link} to="/">UI Components</Link></Button>
 
-            <Button onClick={demoOnClick}>API Request</Button>
+            <Button> <Link className={classes.link} to={"/viscomponents"}>API Request</Link></Button>
 
-            <Button><Link to={"/viscomponents"}>Vis Components</Link></Button>
+            <Button><Link className={classes.link} to={"/viscomponents"}>Vis Components</Link></Button>
 
-            <Button><Link to="/about">About</Link></Button>
+            <Button><Link className={classes.link} to="/about">About</Link></Button>
           </Box>
 
           {/*<div className={classes.grow} />*/}
