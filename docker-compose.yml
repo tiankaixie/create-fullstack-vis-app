@@ -17,7 +17,7 @@ services:
             - CI=true
         command:
             bash -c "npm install
-            && npm audit fix
+            && npx browserslist@latest --update-db
             && npm start"
     server:
         build: ./server

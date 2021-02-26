@@ -1,68 +1,18 @@
 import React from "react";
 import "./App.css";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import store from "./store";
-import Layout from "./components/Layout";
 import { Provider } from "react-redux";
-import { grey } from "@material-ui/core/colors";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: grey[900],
-    },
-    // secondary: {
-    //   main: "#FFF",
-    // },
-  },
-
-  typography: {
-    //     // h1
-    //     // h2
-    //     // h3
-    //     // h4
-    //     // h5
-    //     // h6
-    //     // subtitle1
-    //     // subtitle2
-    //     // body1
-    //     // body2
-    //     // button
-    //     // caption
-    //     // overline
-    // fontFamily: "Arial",
-    //     fontSize: 11,
-
-    //     // Title
-    //     h1: {
-    //         fontSize: 20,
-    //         fontFamily: "Arial"
-    //     },
-    //     // View title
-    //     h6: {
-    //         fontSize: 17,
-    //         fontWeight: 100,
-    //         fontStyle: 'regular',
-    //     },
-    //     // Subtitle
-    //     subtitle1: {
-    //         fontSize: 13
-    //     },
-    //     // axis % legend
-    //     subtitle2: {
-    //         fontSize: 11
-    //     }
-  },
-});
+import "antd/dist/antd.css";
+import { Button, DatePicker, version } from "antd";
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <Layout />
-        </Provider>
-      </ThemeProvider>
+      <h1>antd version: {version}</h1>
+      <DatePicker />
+      <Button type="primary" style={{ marginLeft: 8 }}>
+        Primary Button
+      </Button>
     </div>
   );
 }
