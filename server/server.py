@@ -16,7 +16,7 @@ def hello():
     return f'Hello, {escape(name)}!'
 
 
-@app.route('/getData/', methods=['POST'])
+@app.route('/getHistogramData/', methods=['POST'])
 def get_data():
     request_raw = request.get_json()
     print("get " + request_raw["name"] + " api is triggered")
