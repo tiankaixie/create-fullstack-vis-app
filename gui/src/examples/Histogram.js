@@ -11,7 +11,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        // getData: getData("histogram")
         // updateLassoSelected: selectedNodes =>
         //     dispatch(updateLassoSelected(selectedNodes)),
         // updateBrushClusterSelected: selectedSet =>
@@ -37,8 +36,7 @@ class Histogram extends React.Component {
         const { svgID, canvasHeight, data } = props;
         const margin = { top: 24, right: 25, bottom: 30, left: 45 };
         const height = canvasHeight;
-        const width =
-            this.container.current.getBoundingClientRect().width * 0.91;
+        const width = this.container.current.getBoundingClientRect().width * 0.91;
         d3.select("#" + svgID).style("width", width);
         console.log(width);
         const svg = d3.select("#" + svgID + "-base");

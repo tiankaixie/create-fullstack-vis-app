@@ -2,6 +2,9 @@ import { LOADING_DATA } from "../constants/actionTypes";
 
 const initialState = {
     data: {
+    },
+    histogramData: {
+
     }
 };
 
