@@ -1,20 +1,17 @@
 import * as React from "react";
 import * as d3 from "d3";
 import { connect } from "react-redux";
-import { updateBrushClusterSelected, updateLassoSelected } from "../actions";
 import { regularGrey } from "../constants/colorScheme";
 
 const mapStateToProps = state => {
     return {
-        // input: state.input,
-        // output: state.output,
-        // clusterList: state.ui.clusterList,
-        // clusterSliderUI: state.ui.clusterSliderUI
+        data: state.data,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        // getData: getData("histogram")
         // updateLassoSelected: selectedNodes =>
         //     dispatch(updateLassoSelected(selectedNodes)),
         // updateBrushClusterSelected: selectedSet =>
@@ -22,7 +19,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default class Histogram extends React.Component {
+class Histogram extends React.Component {
     constructor(props) {
         super(props);
         this.container = React.createRef();
@@ -37,61 +34,7 @@ export default class Histogram extends React.Component {
     }
 
     renderSvg(props) {
-        const { svgID, canvasHeight } = props;
-        console.log(props);
-        const data = {
-            0: 5.1,
-            1: 4.9,
-            2: 8.6,
-            3: 6.2,
-            4: 5.1,
-            5: 7.1,
-            6: 6.7,
-            7: 6.1,
-            8: 5,
-            9: 5,
-            10: 5.2,
-            11: 7.9,
-            12: 11.1,
-            13: 5.9,
-            14: 5.5,
-            15: 5.6,
-            16: 6.5,
-            17: 7.7,
-            18: 5.7,
-            19: 6.7,
-            20: 5.7,
-            21: 4.8,
-            22: 5.6,
-            23: 9.5,
-            24: 5.7,
-            25: 4.7,
-            26: 6.3,
-            27: 5.7,
-            28: 6.6,
-            29: 5.5,
-            30: 5.4,
-            31: 9.3,
-            32: 7.6,
-            33: 6.3,
-            34: 5.6,
-            35: 5.9,
-            36: 5.5,
-            37: 5.2,
-            38: 6,
-            39: 6.4,
-            40: 4.9,
-            41: 5,
-            42: 10.3,
-            43: 7.2,
-            44: 4.9,
-            45: 6.9,
-            46: 6.1,
-            47: 5.1,
-            48: 6.5,
-            49: 8.6,
-            50: 5.6
-        };
+        const { svgID, canvasHeight, data } = props;
         const margin = { top: 24, right: 25, bottom: 30, left: 45 };
         const height = canvasHeight;
         const width =
@@ -231,7 +174,7 @@ export default class Histogram extends React.Component {
     }
 }
 
-// export default connect(
-//     mapStateToProps,
-//     mapDispatchToProps
-// )(Histogram);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Histogram);

@@ -4,7 +4,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import "antd/dist/antd.css";
 import { Button, DatePicker, version } from "antd";
-import Main from "./examples/Main";
+import Base from "./examples/Base";
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -35,7 +35,7 @@ function App() {
     const { height, width } = useWindowDimensions();
     return (
         <Provider store={store}>
-            <Main globalHeight={height} />
+            <Base globalHeight={height} />
         </Provider>
     );
 }

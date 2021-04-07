@@ -16,23 +16,14 @@ def hello():
     return f'Hello, {escape(name)}!'
 
 
-@app.route('/getHistogramData/', methods=['POST'])
+@app.route('/getData/', methods=['POST'])
 def get_data():
     request_raw = request.get_json()
-    print("get " + request_raw["name"] + " api is triggered")
-    G = nx.karate_club_graph()
-    nodes = []
-    for node in G.nodes():
-        nodes.append({"node_id": node})
-    edges = []
-    for edge in G.edges():
-        edges.append({"source": edge[0], "source_id": edge[0], "target": edge[1], "target_id": edge[1]})
-        edges.append({"source": edge[1], "source_id": edge[1], "target": edge[0], "target_id": edge[0]})
-    res = {
-        "name": request_raw["name"],
-        "nodes": nodes,
-        "edges": edges
-    }
+    print("get " + request_raw["dataName"] + " api is triggered")
+    res = {}
+    with open("data/" + request_raw["dataName"] + "_data" + ".json") as json_file:
+        res = json.load(json_file)
+    print(res)
     return jsonify(res)
 
 

@@ -1,7 +1,8 @@
 import { LOADING_DATA } from "../constants/actionTypes";
 
 const initialState = {
-    data: {}
+    data: {
+    }
 };
 
 function rootReducer(state = initialState, action) {
