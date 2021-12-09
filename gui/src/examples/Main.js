@@ -6,6 +6,7 @@ import {
     NotificationOutlined
 } from "@ant-design/icons";
 import Histogram from "./Histogram";
+import HistogramNivo from "./HistogramNivo";
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -13,7 +14,7 @@ const { Header, Content, Footer, Sider } = Layout;
 export default class Main extends React.Component {
     render() {
         const { globalHeight } = this.props;
-        console.log(globalHeight);
+        // console.log(globalHeight);
         return (
             <Layout>
                 <Header className="header">
@@ -83,8 +84,12 @@ export default class Main extends React.Component {
                             <Row>
                                 <Col span={"10"}>
                                     <Card title={"Histogram"}>
-                                        <Histogram
+                                        {/* <Histogram
                                             svgID={"histogram"}
+                                            canvasHeight={globalHeight * 0.3}
+                                        /> */}
+
+                                        <HistogramNivo
                                             canvasHeight={globalHeight * 0.3}
                                         />
                                     </Card>
