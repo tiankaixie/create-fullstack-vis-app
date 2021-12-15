@@ -1,109 +1,274 @@
 {
   "data": [
     {
-      "country": "AD",
-      "hot dog": 63,
-      "hot dogColor": "hsl(161, 70%, 50%)",
-      "burger": 126,
-      "burgerColor": "hsl(7, 70%, 50%)",
-      "sandwich": 160,
-      "sandwichColor": "hsl(82, 70%, 50%)",
-      "kebab": 64,
-      "kebabColor": "hsl(76, 70%, 50%)",
-      "fries": 152,
-      "friesColor": "hsl(60, 70%, 50%)",
-      "donut": 193,
-      "donutColor": "hsl(144, 70%, 50%)"
+      "id": "japan",
+      "color": "hsl(254, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 2
+        },
+        {
+          "x": "helicopter",
+          "y": 192
+        },
+        {
+          "x": "boat",
+          "y": 138
+        },
+        {
+          "x": "train",
+          "y": 251
+        },
+        {
+          "x": "subway",
+          "y": 87
+        },
+        {
+          "x": "bus",
+          "y": 205
+        },
+        {
+          "x": "car",
+          "y": 238
+        },
+        {
+          "x": "moto",
+          "y": 141
+        },
+        {
+          "x": "bicycle",
+          "y": 3
+        },
+        {
+          "x": "horse",
+          "y": 197
+        },
+        {
+          "x": "skateboard",
+          "y": 259
+        },
+        {
+          "x": "others",
+          "y": 294
+        }
+      ]
     },
     {
-      "country": "AE",
-      "hot dog": 132,
-      "hot dogColor": "hsl(16, 70%, 50%)",
-      "burger": 153,
-      "burgerColor": "hsl(182, 70%, 50%)",
-      "sandwich": 35,
-      "sandwichColor": "hsl(276, 70%, 50%)",
-      "kebab": 68,
-      "kebabColor": "hsl(299, 70%, 50%)",
-      "fries": 120,
-      "friesColor": "hsl(201, 70%, 50%)",
-      "donut": 123,
-      "donutColor": "hsl(267, 70%, 50%)"
+      "id": "france",
+      "color": "hsl(67, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 194
+        },
+        {
+          "x": "helicopter",
+          "y": 160
+        },
+        {
+          "x": "boat",
+          "y": 151
+        },
+        {
+          "x": "train",
+          "y": 170
+        },
+        {
+          "x": "subway",
+          "y": 181
+        },
+        {
+          "x": "bus",
+          "y": 21
+        },
+        {
+          "x": "car",
+          "y": 43
+        },
+        {
+          "x": "moto",
+          "y": 4
+        },
+        {
+          "x": "bicycle",
+          "y": 64
+        },
+        {
+          "x": "horse",
+          "y": 232
+        },
+        {
+          "x": "skateboard",
+          "y": 137
+        },
+        {
+          "x": "others",
+          "y": 280
+        }
+      ]
     },
     {
-      "country": "AF",
-      "hot dog": 80,
-      "hot dogColor": "hsl(300, 70%, 50%)",
-      "burger": 78,
-      "burgerColor": "hsl(109, 70%, 50%)",
-      "sandwich": 179,
-      "sandwichColor": "hsl(197, 70%, 50%)",
-      "kebab": 123,
-      "kebabColor": "hsl(65, 70%, 50%)",
-      "fries": 183,
-      "friesColor": "hsl(211, 70%, 50%)",
-      "donut": 192,
-      "donutColor": "hsl(136, 70%, 50%)"
+      "id": "us",
+      "color": "hsl(212, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 17
+        },
+        {
+          "x": "helicopter",
+          "y": 4
+        },
+        {
+          "x": "boat",
+          "y": 55
+        },
+        {
+          "x": "train",
+          "y": 283
+        },
+        {
+          "x": "subway",
+          "y": 270
+        },
+        {
+          "x": "bus",
+          "y": 282
+        },
+        {
+          "x": "car",
+          "y": 99
+        },
+        {
+          "x": "moto",
+          "y": 234
+        },
+        {
+          "x": "bicycle",
+          "y": 161
+        },
+        {
+          "x": "horse",
+          "y": 152
+        },
+        {
+          "x": "skateboard",
+          "y": 188
+        },
+        {
+          "x": "others",
+          "y": 175
+        }
+      ]
     },
     {
-      "country": "AG",
-      "hot dog": 36,
-      "hot dogColor": "hsl(178, 70%, 50%)",
-      "burger": 9,
-      "burgerColor": "hsl(287, 70%, 50%)",
-      "sandwich": 148,
-      "sandwichColor": "hsl(144, 70%, 50%)",
-      "kebab": 114,
-      "kebabColor": "hsl(287, 70%, 50%)",
-      "fries": 4,
-      "friesColor": "hsl(195, 70%, 50%)",
-      "donut": 150,
-      "donutColor": "hsl(267, 70%, 50%)"
+      "id": "germany",
+      "color": "hsl(278, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 145
+        },
+        {
+          "x": "helicopter",
+          "y": 175
+        },
+        {
+          "x": "boat",
+          "y": 117
+        },
+        {
+          "x": "train",
+          "y": 148
+        },
+        {
+          "x": "subway",
+          "y": 274
+        },
+        {
+          "x": "bus",
+          "y": 249
+        },
+        {
+          "x": "car",
+          "y": 238
+        },
+        {
+          "x": "moto",
+          "y": 23
+        },
+        {
+          "x": "bicycle",
+          "y": 241
+        },
+        {
+          "x": "horse",
+          "y": 215
+        },
+        {
+          "x": "skateboard",
+          "y": 180
+        },
+        {
+          "x": "others",
+          "y": 178
+        }
+      ]
     },
     {
-      "country": "AI",
-      "hot dog": 89,
-      "hot dogColor": "hsl(225, 70%, 50%)",
-      "burger": 75,
-      "burgerColor": "hsl(290, 70%, 50%)",
-      "sandwich": 44,
-      "sandwichColor": "hsl(34, 70%, 50%)",
-      "kebab": 71,
-      "kebabColor": "hsl(331, 70%, 50%)",
-      "fries": 75,
-      "friesColor": "hsl(209, 70%, 50%)",
-      "donut": 97,
-      "donutColor": "hsl(133, 70%, 50%)"
-    },
-    {
-      "country": "AL",
-      "hot dog": 169,
-      "hot dogColor": "hsl(356, 70%, 50%)",
-      "burger": 172,
-      "burgerColor": "hsl(352, 70%, 50%)",
-      "sandwich": 68,
-      "sandwichColor": "hsl(121, 70%, 50%)",
-      "kebab": 43,
-      "kebabColor": "hsl(332, 70%, 50%)",
-      "fries": 164,
-      "friesColor": "hsl(65, 70%, 50%)",
-      "donut": 101,
-      "donutColor": "hsl(227, 70%, 50%)"
-    },
-    {
-      "country": "AM",
-      "hot dog": 123,
-      "hot dogColor": "hsl(326, 70%, 50%)",
-      "burger": 117,
-      "burgerColor": "hsl(136, 70%, 50%)",
-      "sandwich": 101,
-      "sandwichColor": "hsl(305, 70%, 50%)",
-      "kebab": 162,
-      "kebabColor": "hsl(149, 70%, 50%)",
-      "fries": 60,
-      "friesColor": "hsl(195, 70%, 50%)",
-      "donut": 119,
-      "donutColor": "hsl(316, 70%, 50%)"
+      "id": "norway",
+      "color": "hsl(358, 70%, 50%)",
+      "data": [
+        {
+          "x": "plane",
+          "y": 286
+        },
+        {
+          "x": "helicopter",
+          "y": 294
+        },
+        {
+          "x": "boat",
+          "y": 116
+        },
+        {
+          "x": "train",
+          "y": 294
+        },
+        {
+          "x": "subway",
+          "y": 221
+        },
+        {
+          "x": "bus",
+          "y": 137
+        },
+        {
+          "x": "car",
+          "y": 171
+        },
+        {
+          "x": "moto",
+          "y": 226
+        },
+        {
+          "x": "bicycle",
+          "y": 261
+        },
+        {
+          "x": "horse",
+          "y": 238
+        },
+        {
+          "x": "skateboard",
+          "y": 79
+        },
+        {
+          "x": "others",
+          "y": 89
+        }
+      ]
     }
   ]
 }
