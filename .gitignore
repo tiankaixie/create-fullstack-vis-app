@@ -25,3 +25,6 @@ yarn-error.log*
 .idea
 
 __pycache__
+
+STDERR_file
+STDOUT_file
